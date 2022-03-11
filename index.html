@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Check List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="checklist">
+      <h1>工程驗收單</h1>
+      <div class="selection">
+        <select
+          id="projectName"
+          onchange="changePlace(this.selectedIndex)"
+        ></select>
+        <select id="projectAdes" onchange=""></select>
+      </div>
+      <div class="staff">
+        <input placeholder="施工人員" type="text" required class="staffName" />
+        <input placeholder="員工編號" type="text" required class="staffNum" />
+      </div>
+      <div class="checkitems">
+        <h2>驗收項目</h2>
+        <div class="acceptance electric">
+          <p>水電管線</p>
+          <div class="choice">
+            <input type="radio" value="true" name="test" />合格
+            <input type="radio" value="false" name="test" />不合格
+          </div>
+
+          <input type="text" placeholder="備註" class="dir" />
+        </div>
+        <div class="acceptance cement">
+          <p>泥水施作</p>
+          <div class="choice">
+            <input type="radio" value="true" name="test2" />合格
+            <input type="radio" value="false" name="test2" />不合格
+          </div>
+          <input type="text" placeholder="備註" class="dir" />
+        </div>
+        <div class="acceptance carpentry">
+          <p>木工施作</p>
+          <div class="choice">
+            <input type="radio" value="true" name="test3" />合格
+            <input type="radio" value="false" name="test3" />不合格
+          </div>
+          <input type="text" placeholder="備註" class="dir" />
+        </div>
+        <div class="acceptance paint">
+          <p>油漆施作</p>
+          <div class="choice">
+            <input type="radio" value="true" name="test4" />合格
+            <input type="radio" value="false" name="test4" />不合格
+          </div>
+          <input type="text" placeholder="備註" class="dir" />
+        </div>
+      </div>
+      <button class="submit">送出</button>
+      <div class="time"></div>
+    </div>
+    <section class="checklistcom"></section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
